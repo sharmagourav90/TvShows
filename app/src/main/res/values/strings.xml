@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TvShows</string>
+    <string name="loading">Loading...</string>
+    <string name="no_network">No Network.</string>
+</resources>

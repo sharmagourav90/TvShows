@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="imageType"
+            type="String" />
+
+        <variable
+            name="episode"
+            type="com.coder.tvshows.data.network.model.Episode" />
+
+        <variable
+            name="itemClick"
+            type="com.coder.tvshows.ui.today.list.TodaysShowListAdapter.ItemClick" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="@{() -> itemClick.onItemClick(episode)}"
+            android:scaleType="fitXY"
+            app:imageUrl="@{episode.show.image[imageType]}" />
+
+    </LinearLayout>
+</layout>
