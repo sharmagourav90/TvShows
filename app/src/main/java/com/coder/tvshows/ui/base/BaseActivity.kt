@@ -1,4 +1,6 @@
 package com.coder.tvshows.ui.base
 
-class BaseActivity {
+import dagger.android.support.DaggerAppCompatActivity
+
+open class BaseActivity : DaggerAppCompatActivity() {
 }

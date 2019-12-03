@@ -28,7 +28,7 @@ class TodaysShowListFragment : BaseFragment(), TodaysShowListAdapter.ItemClick {
     override fun provideViewModelFactory() = factory
     val mViewModel: TodaysShowListViewModel by lazy { baseViewModel as TodaysShowListViewModel }
 
-    private val mAdapter: TodaysShowListAdapter by lazy { TodaysShowListAdapter(itemClick) }
+    private val mAdapter: TodaysShowListAdapter by lazy { TodaysShowListAdapter(this) }
     private var mNumItems = 2
 
     companion object {

@@ -14,6 +14,12 @@ class TodaysShowDetailsFragment : BaseFragment() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
+    companion object {
+        val TAG = "TodaysShowDetailsFragment"
+
+        fun newInstance() = TodaysShowDetailsFragment()
+    }
+
     override fun initUI() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }

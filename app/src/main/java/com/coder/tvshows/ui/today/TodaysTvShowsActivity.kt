@@ -3,10 +3,11 @@ package com.coder.tvshows.ui.today
 import android.os.Bundle
 import com.coder.tvshows.R
 import com.coder.tvshows.data.network.model.Episode
+import com.coder.tvshows.ui.base.BaseActivity
+import com.coder.tvshows.ui.today.details.TodaysShowDetailsFragment
 import com.coder.tvshows.ui.today.list.TodaysShowListFragment
-import dagger.android.support.DaggerAppCompatActivity
 
-class TodaysTvShowsActivity : DaggerAppCompatActivity(), TodaysShowListFragment.ItemClick {
+class TodaysTvShowsActivity : BaseActivity(), TodaysShowListFragment.ItemClick {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -31,6 +32,7 @@ class TodaysTvShowsActivity : DaggerAppCompatActivity(), TodaysShowListFragment.
     }
 
     private fun showDetails(episode: Episode) {
-
+        val tag = TodaysShowDetailsFragment.TAG
+        val fragment = TodaysShowListFragment.newInstance()
     }
 }
